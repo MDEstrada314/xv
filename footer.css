@@ -1,0 +1,62 @@
+.footer-invitacion{
+    width:100%;
+    padding:60px 20px 40px;
+    text-align:center;
+
+    background:#fffdfb;
+
+    position:relative;
+    overflow:hidden;
+}
+
+/* ICONOS */
+
+.info-footer{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:60px;
+    margin-bottom:40px;
+    flex-wrap:wrap;
+}
+
+.info-item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.info-item img{
+    width:65px;
+    height:65px;
+}
+
+.info-item p{
+    margin:0;
+    color:#3f3f3f;
+    font-size:15px;
+    font-weight:600;
+    line-height:1.3;
+    text-align:left;
+    font-family:Arial, sans-serif;
+}
+
+/* TEXTO */
+
+.mensaje-footer{
+
+    font-family:'Great Vibes', cursive;
+    font-size:70px;
+    color:#ef9aa8;
+    font-weight:400;
+
+    margin:40px 0;
+}
+
+/* CORONA */
+
+.corona{
+
+    width:80px;
+    opacity:.55;
+}
