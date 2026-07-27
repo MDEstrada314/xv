@@ -1,38 +1,48 @@
 
-    /* --- VARIABLES DE COLOR Y ESTILOS BASE --- */
-    :root {
-      --primary: #d4a373;
-      --secondary: #e8b4b8;
-      --accent: #f7d6d0;
-      --bg-color: #faf6f0;
-      --card-bg: #ffffff;
-      --text-dark: #4a4238;
-      --text-muted: #7d7367;
-      --font-title: 'Great Vibes', cursive;
-      --font-serif: 'Cormorant Garamond', serif;
-      --font-sans: 'Montserrat', sans-serif;
-    }
+@import url("musica.css");
+/* --- VARIABLES DE COLOR Y ESTILOS BASE --- */
+:root {
+    --primary: #d4a373;
+    --secondary: #e8b4b8;
+    --accent: #f7d6d0;
+    --bg-color: #faf6f0;
+    --card-bg: #ffffff;
+    --text-dark: #4a4238;
+    --text-muted: #7d7367;
+    --font-title: 'Great Vibes', cursive;
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Montserrat', sans-serif;
+}
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
 
-    body {
-     
-      color: var(--text-dark);
-      font-family: var(--font-sans);
-      line-height: 1.6;
-      display: flex;
-      justify-content: center;
-      
-     
-    }
+/* 1. Definir la tipografía */
+@font-face {
+  font-family: 'Symphony-Regular'; /* El nombre que tú quieras darle */
+  src:  url('fonts/symphony-pro-regular.otf') format('truetype'); /* Opcional: por si tienes más formatos */
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    color: var(--text-dark);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+
+
+}
 
 header {
-    height: 500px;
-    width: 100%; 
+    height: 420px;
+    width: 100%;
     background-image: url('images/flores-1.png');
     background-position: top right;
     background-repeat: no-repeat;
@@ -41,252 +51,294 @@ header {
     flex-direction: column;
 
     align-items: center;
-    gap: 20px;
-
-        .titulo-xv{
 
 
+    .titulo-xv {
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 100px;
+        margin-bottom: 0;
 
-            font-family: "Playfair Display", serif;
-            font-optical-sizing: auto;
-            font-weight: Medium;
-            font-style: normal;
-            color: black;   
-            font-size: 16px;
+        font-family: "Playfair Display", serif;
+        font-optical-sizing: auto;
+        font-weight: Medium;
+        font-style: normal;
+        color: black;
+        font-size: 18px;
 
-            h2{
-                font-weight: bold;
-                font-size: 50px;
-                color: #E4878F;
-                margin-left: 10px;
-            }
+        h2 {
+            font-weight: bold;
+            font-size: 50px;
+            color: #E4878F;
+            margin-left: 10px;
+            margin-bottom: 0;
+            padding: o;
         }
 
-      
-
-
-
-
     }
 
-    /* --- CONTENEDOR PRINCIPAL TIPO TARJETA --- */
-    .invitation-container {
-      max-width: 500px;
-      width: 100%;
-      background: var(--card-bg);
-      border-radius: 20px;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-      overflow: hidden;
-      border: 1px solid rgba(212, 163, 115, 0.2);
+    img {
+        width: 350px;
+        margin: 0;
+        padding: 0;
     }
 
-    /* --- ANIMACIONES DE ENTRADA --- */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(25px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
+}
 
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+/* --- CONTENEDOR PRINCIPAL TIPO TARJETA --- */
+.invitation-container {
+    max-width: 500px;
+    width: 100%;
+    background: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    border: 1px solid rgba(212, 163, 115, 0.2);
+}
 
-    /* --- CABECERA E IMAGEN --- */
-    .hero {
-      position: relative;
-      text-align: center;
-   
-      padding: 30px 20px 10px;
-    }
+/* --- ANIMACIONES DE ENTRADA --- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
 
-    .photo-frame {
-      width: 180px;
-      height: 180px;
-      margin: 0 auto 20px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 4px solid var(--accent);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    }
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-    .photo-frame img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+/* --- CABECERA E IMAGEN --- */
+.hero {
+    position: relative;
+    text-align: center;
 
-    .subtitle {
-      font-family: var(--font-serif);
-      letter-spacing: 4px;
-      font-size: 0.9rem;
-      color: var(--primary);
-      text-transform: uppercase;
-    }
+    padding: 30px 20px 10px;
+}
 
-    .main-name {
-      font-family: var(--font-title);
-      font-size: 3.5rem;
-      color: var(--primary);
-      margin: -10px 0 0;
-      line-height: 1.1;
-    }
+.photo-frame {
+    width: 100%;
+    height: 450px; /* Define una altura fija (ajusta este valor según el alto de tu foto) */
+    background-image: url('images/camila-1.png');
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative; /* Sirve de ancla para posicionar la flor sin empujar nada */
+}
 
-    /* --- SECCIONES DE TEXTO --- */
-    .section {
-      padding: 25px 25px;
-      text-align: center;
-      border-bottom: 1px dashed rgba(212, 163, 115, 0.3);
-    }
+.photo-frame img {
+    width: 120px;
+    height: auto;
+    display: block;
+    
+    /* Posicionamiento absoluto para no empujar el contenido inferior */
+    position: absolute;
+    top: 25px;
+    left: 0;
+}
 
-    .section:last-child {
-      border-bottom: none;
-    }
+.subtitle {
+    font-family: var(--font-serif);
+    letter-spacing: 4px;
+    font-size: 0.9rem;
+    color: var(--primary);
+    text-transform: uppercase;
+}
 
-    .quote {
-      font-family: var(--font-serif);
-      font-style: italic;
-      font-size: 1.15rem;
-      color: var(--text-muted);
-    }
+.contenedor-nombre { 
+  position: relative; /* Clave: sirve de ancla para los hijos absolutos */
+  width: 100%;       /* O el ancho que necesites */
+  height: 0px;     /* Dale una altura mínima para que se vea el contenido */
+  display: flex;
+  justify-content: center; /* Centra el bloque entero en la página */
+  align-items: center;  
+  margin: 0;
+  padding: 0;  /* Centra el bloque entero verticalmente si es necesario */
+  
+}
 
-    .guest-info {
-      background-color: #fdf8f5;
-      border-radius: 12px;
-      padding: 15px;
-      margin-top: 15px;
-      border: 1px solid var(--accent);
-    }
+.nombre-principal{
+    position: absolute;
+    font-family: "Playfair Display", serif;
+    font-weight: 200;
+    font-size: 3rem;
+    color: #000000;   
+    text-transform: uppercase; 
+    margin: 0;
+    z-index: 2;  
+    left: 50%;
+    transform: translateX(-50%); 
+    top: 20px;
 
-    .guest-info h4 {
-      font-size: 0.8rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--primary);
-      margin-bottom: 5px;
-    }
+  
+}
 
-    .guest-name {
-      font-family: var(--font-serif);
-      font-size: 1.3rem;
-      font-weight: 600;
-    }
+.nombre-cursiva {
+    position: absolute;
+    font-family: 'Symphony-Regular', serif;
+    font-size: 6.5rem;
+    color: #E08E8E;  
+    margin: 0;
+    z-index: 1; 
+  /* Ajuste de posición SUPER ESPECÍFICO respecto a "MARÍA" */
+  /* Usamos las coordenadas de la imagen de referencia como guía */
+  left: calc(40% - 60px); /* Centrado y luego desplazado a la IZQUIERDA (eje X) */
+  top: 15px;
 
-    /* --- DETALLES DE FECHA Y LUGAR --- */
-    .details-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      margin-top: 10px;
-    }
+}
 
-    .detail-card {
-      background: #faf6f0;
-      padding: 15px;
-      border-radius: 12px;
-    }
+/* --- SECCIONES DE TEXTO --- */
+.section {
+    padding: 25px 25px;
+    text-align: center;
+    border-bottom: 1px dashed rgba(212, 163, 115, 0.3);
+}
 
-    .detail-card i {
-      font-size: 1.5rem;
-      color: var(--primary);
-      margin-bottom: 8px;
-    }
+.section:last-child {
+    border-bottom: none;
+}
 
-    .detail-card h3 {
-      font-family: var(--font-serif);
-      font-size: 1.2rem;
-      margin-bottom: 5px;
-    }
+.quote {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--text-muted);
+}
 
-    /* --- BOTONES --- */
-    .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      background-color: var(--primary);
-      color: #fff;
-      text-decoration: none;
-      border-radius: 30px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-top: 12px;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(212, 163, 115, 0.3);
-      border: none;
-      cursor: pointer;
-    }
+.guest-info {
+    background-color: #fdf8f5;
+    border-radius: 12px;
+    padding: 15px;
+    margin-top: 15px;
+    border: 1px solid var(--accent);
+}
 
-    .btn:hover {
-      background-color: #c39262;
-      transform: translateY(-2px);
-    }
+.guest-info h4 {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 5px;
+}
 
-    .btn-whatsapp {
-      background-color: #25d366;
-      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
-    }
+.guest-name {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    font-weight: 600;
+}
 
-    .btn-whatsapp:hover {
-      background-color: #1ebc57;
-    }
+/* --- DETALLES DE FECHA Y LUGAR --- */
+.details-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+}
 
-    /* --- CÓDIGO DE VESTUARIO --- */
-    .dress-code-box {
-      text-align: left;
-      background: #fdf8f5;
-      padding: 15px;
-      border-radius: 12px;
-      margin-bottom: 15px;
-    }
+.detail-card {
+    background: #faf6f0;
+    padding: 15px;
+    border-radius: 12px;
+}
 
-    .dress-code-box h4 {
-      color: var(--primary);
-      margin-bottom: 5px;
-      font-size: 0.95rem;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
+.detail-card i {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
 
-    .disclaimer {
-      font-size: 0.8rem;
-      color: #998a7a;
-      background-color: #fff5f5;
-      padding: 12px;
-      border-radius: 10px;
-      border-left: 3px solid var(--secondary);
-    }
+.detail-card h3 {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
 
-    /* --- NOTAS ADICIONALES --- */
-    .extra-notes {
-      display: flex;
-      justify-content: space-around;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      margin-top: 15px;
-    }
+/* --- BOTONES --- */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(212, 163, 115, 0.3);
+    border: none;
+    cursor: pointer;
+}
 
-    .extra-notes div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 5px;
-    }
+.btn:hover {
+    background-color: #c39262;
+    transform: translateY(-2px);
+}
 
-    .extra-notes i {
-      color: var(--primary);
-    }
+.btn-whatsapp {
+    background-color: #25d366;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
 
-    .footer-text {
-      font-family: var(--font-title);
-      font-size: 2.2rem;
-      color: var(--primary);
-      margin-top: 15px;
-    }
+.btn-whatsapp:hover {
+    background-color: #1ebc57;
+}
+
+/* --- CÓDIGO DE VESTUARIO --- */
+.dress-code-box {
+    text-align: left;
+    background: #fdf8f5;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.dress-code-box h4 {
+    color: var(--primary);
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.disclaimer {
+    font-size: 0.8rem;
+    color: #998a7a;
+    background-color: #fff5f5;
+    padding: 12px;
+    border-radius: 10px;
+    border-left: 3px solid var(--secondary);
+}
+
+/* --- NOTAS ADICIONALES --- */
+.extra-notes {
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 15px;
+}
+
+.extra-notes div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.extra-notes i {
+    color: var(--primary);
+}
+
+.footer-text {
+    font-family: var(--font-title);
+    font-size: 2.2rem;
+    color: var(--primary);
+    margin-top: 15px;
+}

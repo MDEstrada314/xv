@@ -32,56 +32,94 @@
         <h2>XV</h2>
         <span>AÑOS</span>
       </div>
-      <h1 class="main-name">María Camila</h1>
+      <img src="images/corona.png" alt="corona">
+
+     <div class="contenedor-nombre">
+      <span class="nombre-cursiva">Camila</span>
+      <h1 class="nombre-principal">MARÍA</h1>
+    </div>
     </header>
+    <div class="photo-frame">
+        <!-- Reemplaza la URL de la imagen por la foto real -->
+        <img class="flores-2" src="images/flores-2.png" alt="María Camila ">
+        <div></div>
+    </div>
 
     <!-- FRASE E INVITADO -->
-    <section class="section fade-in">
 
-            <div class="photo-frame">
-        <!-- Reemplaza la URL de la imagen por la foto real -->
-        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=500" alt="María Camila">
+  <section class="invitacion-seccion">
+  <!-- Reproductor de Audio -->
+  <div class="music-player">
+    <audio id="cancion-xv" src="audio/Unridden Way — STEYL   Most Emotional Neo-Classical Music.mp3" preload="metadata"></audio>
+    <span class="player-title">DALE PLAY</span>
+    
+    <div class="progress-bar-container">
+      <span class="time"></span>
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
       </div>
-      <p class="quote">
-        "Hay momentos que se guardan para siempre en el corazón. Con inmensa alegría, te invito a compartir conmigo la noche más especial de mis XV años."
-      </p>
+      <span class="time"></span>
+    </div>
 
-      <div class="guest-info">
-        <h4>Acompañame</h4>
-        <p class="guest-name">Sandra Sanchez y Flia.</p>
-      </div>
-    </section>
+    <div class="player-controls">
+      <!-- Shuffle -->
+      <button class="btn-icon">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.45 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/></svg>
+      </button>
+      
+      <!-- Prev -->
+      <button class="btn-icon">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+      </button>
 
-    <!-- FECHA, LUGAR Y HORA -->
-    <section class="section fade-in">
-      <div class="details-grid">
-        
-        <div class="detail-card">
-          <i class="fa-regular fa-calendar-days"></i>
-          <h3>FECHA</h3>
-          <p><strong>Sábado, 22 de Agosto de 2026</strong></p>
-        </div>
+      <!-- Play / Pause Button -->
+      <button class="btn-play" id="btn-play-pause" onclick="togglePlay()">
+        <i id="icon-play" class="fa-solid fa-play"></i>
+      </button>
 
-        <div class="detail-card">
-          <i class="fa-solid fa-location-dot"></i>
-          <h3>LUGAR</h3>
-          <p><strong>Cabañas Gualanday</strong></p>
-          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">
-            El lugar cuenta con parqueadero para invitados.
-          </p>
-          <a href="https://maps.google.com" target="_blank" class="btn">
-            <i class="fa-solid fa-map-location-dot"></i> Ver Ubicación
-          </a>
-        </div>
+      <!-- Next -->
+      <button class="btn-icon">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+      </button>
 
-        <div class="detail-card">
-          <i class="fa-regular fa-clock"></i>
-          <h3>HORA</h3>
-          <p><strong>6:30 p.m.</strong></p>
-        </div>
+      <!-- Repeat -->
+      <button class="btn-icon">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/></svg>
+      </button>
+    </div>
+  </div>
 
-      </div>
-    </section>
+  <!-- Divisor Ornamental Superior -->
+  <div class="divider">
+    <span class="line"></span>
+    <span class="ornament"></span>
+    <span class="line"></span>
+  </div>
+
+  <!-- Texto de la Invitación -->
+  <p class="texto-invitacion">
+    “LOS MOMENTOS MÁS ESPECIALES COBRAN VERDADERO SIGNIFICADO CUANDO SE VIVEN JUNTO A QUIENES OCUPAN UN LUGAR IMPORTANTE EN NUESTRO CORAZÓN. CON MUCHO CARIÑO, <strong>TE INVITO A ACOMPAÑARME EN LA CELEBRACIÓN DE MIS XV AÑOS</strong>, UNA NOCHE QUE RECORDARÉ POR SIEMPRE.”
+  </p>
+
+  <!-- Divisor Ornamental Inferior -->
+  <div class="divider">
+    <span class="line"></span>
+    <span class="ornament"></span>
+    <span class="line"></span>
+  </div>
+
+  <!-- Sección Fecha -->
+  <div class="fecha-container">
+    <span class="fecha-script">fecha</span>
+    <div class="fecha-grid">
+      <div class="dia-semana">SÁBADO</div>
+      <div class="dia-numero">22</div>
+      <div class="mes">AGOSTO</div>
+    </div>
+  </div>
+  </section>
+
+
 
     <!-- DRESS CODE Y REGALO -->
     <section class="section fade-in">
@@ -158,5 +196,7 @@
       fadeElements.forEach(el => observer.observe(el));
     });
   </script>
+
+  <script src="script.js"></script>
 </body>
 </html>

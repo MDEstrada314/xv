@@ -1,0 +1,183 @@
+/* --- Importación de Fuentes Recomendadas (Si ya tienes las tuyas, usa las tuyas) --- */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+.invitacion-seccion {
+  position: relative;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 40px 60px;
+  text-align: center;
+  background-color: #ffffff;
+
+  /* --- FLORES LATERALES (Dos imágenes en segundo plano) --- */
+  background-image: url('images/flores-izquierda.png'), url('images/flores-derecha.png');
+  background-position: left center, right center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 160px auto, 160px auto; /* Ajusta este valor según el tamaño de tus PNGs */
+}
+
+/* --- REPRODUCTOR DE MÚSICA --- */
+.music-player {
+  max-width: 280px;
+  margin: 0 auto 30px auto;
+  color: #4a3343;
+}
+
+.player-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.progress-bar-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  color: #888;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 2px;
+  background-color: #e0e0e0;
+  position: relative;
+}
+
+.progress-fill {
+  width: 15%; /* Porcentaje de avance */
+  height: 100%;
+  background-color: #4a3343;
+  position: relative;
+}
+
+/* Bolita indicadora del reproductor */
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  right: -4px;
+  top: -3px;
+  width: 8px;
+  height: 8px;
+  background-color: #4a3343;
+  border-radius: 50%;
+}
+
+.player-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  color: #5d4454;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.btn-play {
+  background-color: #4a3343;
+  color: #ffffff;
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+/* --- DIVISORES DE LÍNEA ELEGANTES --- */
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+.divider .line {
+  flex: 1;
+  height: 1px;
+  background-color: #2b2b2b;
+  max-width: 180px;
+}
+
+/* Decoración central de la línea (muesca de diamante/rizo) */
+.divider .ornament {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #2b2b2b;
+  transform: rotate(45deg);
+  margin: 0 10px;
+}
+
+/* --- TEXTO PRINCIPAL --- */
+.texto-invitacion {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: #333333;
+  max-width: 440px;
+  margin: 0 auto;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+}
+
+.texto-invitacion strong {
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+/* --- SECCIÓN FECHA --- */
+.fecha-container {
+  margin-top: 20px;
+}
+
+.fecha-script {
+  font-family: 'Great Vibes', cursive; /* O la fuente cursiva que tengas importada */
+  font-size: 2.5rem;
+  color: #333333;
+  display: block;
+  margin-bottom: -15px; /* Superpone 'fecha' sobre el '22' */
+  position: relative;
+  z-index: 2;
+}
+
+.fecha-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.dia-semana, .mes {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  color: #222222;
+  border-top: 1px solid #2b2b2b;
+  border-bottom: 1px solid #2b2b2b;
+  padding: 4px 10px;
+}
+
+.dia-numero {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  color: #e5989b; /* Tono rosa pastel de la imagen */
+  line-height: 1;
+  font-weight: 400;
+}
