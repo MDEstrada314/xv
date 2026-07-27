@@ -7,7 +7,6 @@
   margin: 0 auto;
   padding: 20px 60px;
   text-align: center;
-  background-color: #ffffff;
 
   /* --- FLORES LATERALES (Dos imágenes en segundo plano) --- */
   background-image: url('images/flores-izquierda.png'), url('images/flores-derecha.png');
