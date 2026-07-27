@@ -45,7 +45,7 @@ body {
 }
 
 header {
-    height: 420px;
+    height: 500px;
     width: 100%;
     background-image: url('images/flores-1.png');
     background-position: top right;
@@ -125,12 +125,13 @@ header {
 
 .photo-frame {
     width: 100%;
-    height: 450px; /* Define una altura fija (ajusta este valor según el alto de tu foto) */
+    height: 500px; /* Define una altura fija (ajusta este valor según el alto de tu foto) */
     background-image: url('images/camila-1.png');
-    background-position: top right;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
-    position: relative; /* Sirve de ancla para posicionar la flor sin empujar nada */
+    background-size: cover;
+    position: relative; 
 }
 
 .photo-frame img {
@@ -147,12 +148,14 @@ header {
 
 .photo-frame-2 {
     width: 100%;
-    height: 400px; /* Define una altura fija (ajusta este valor según el alto de tu foto) */
+    height: 420px; /* Define una altura fija (ajusta este valor según el alto de tu foto) */
     background-image: url('images/camia-2.png');
-    background-position: top right;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
-    position: relative; /* Sirve de ancla para posicionar la flor sin empujar nada */
+    background-size: cover;
+    position: relative; 
+   
 }
 
 .photo-frame-2 img {
@@ -169,12 +172,13 @@ header {
 
 .photo-frame-3{
     width: 100%;
-    height: 400px; /* Define una altura fija (ajusta este valor según el alto de tu foto) */
+    height: 450px; /* Define una altura fija (ajusta este valor según el alto de tu foto) */
     background-image: url('images/camila-3.png');
-    background-position: top right;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
-    position: relative; /* Sirve de ancla para posicionar la flor sin empujar nada */
+    background-size: cover;
+    position: relative; 
 }
 
 .photo-frame-3 img {
