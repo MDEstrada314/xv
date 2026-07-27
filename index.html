@@ -12,254 +12,13 @@
   
   <!-- Iconos de FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 
-  <style>
-    /* --- VARIABLES DE COLOR Y ESTILOS BASE --- */
-    :root {
-      --primary: #d4a373;
-      --secondary: #e8b4b8;
-      --accent: #f7d6d0;
-      --bg-color: #faf6f0;
-      --card-bg: #ffffff;
-      --text-dark: #4a4238;
-      --text-muted: #7d7367;
-      --font-title: 'Great Vibes', cursive;
-      --font-serif: 'Cormorant Garamond', serif;
-      --font-sans: 'Montserrat', sans-serif;
-    }
+ <!-- Fuentes elegantes de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-dark);
-      font-family: var(--font-sans);
-      line-height: 1.6;
-      display: flex;
-      justify-content: center;
-      padding: 20px 10px;
-    }
-
-    /* --- CONTENEDOR PRINCIPAL TIPO TARJETA --- */
-    .invitation-container {
-      max-width: 500px;
-      width: 100%;
-      background: var(--card-bg);
-      border-radius: 20px;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-      overflow: hidden;
-      border: 1px solid rgba(212, 163, 115, 0.2);
-    }
-
-    /* --- ANIMACIONES DE ENTRADA --- */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(25px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* --- CABECERA E IMAGEN --- */
-    .hero {
-      position: relative;
-      text-align: center;
-      background: linear-gradient(180deg, rgba(232,180,184,0.3) 0%, rgba(250,246,240,0) 100%);
-      padding: 30px 20px 10px;
-    }
-
-    .photo-frame {
-      width: 180px;
-      height: 180px;
-      margin: 0 auto 20px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 4px solid var(--accent);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    }
-
-    .photo-frame img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .subtitle {
-      font-family: var(--font-serif);
-      letter-spacing: 4px;
-      font-size: 0.9rem;
-      color: var(--primary);
-      text-transform: uppercase;
-    }
-
-    .main-name {
-      font-family: var(--font-title);
-      font-size: 3.5rem;
-      color: var(--primary);
-      margin: -10px 0 0;
-      line-height: 1.1;
-    }
-
-    /* --- SECCIONES DE TEXTO --- */
-    .section {
-      padding: 25px 25px;
-      text-align: center;
-      border-bottom: 1px dashed rgba(212, 163, 115, 0.3);
-    }
-
-    .section:last-child {
-      border-bottom: none;
-    }
-
-    .quote {
-      font-family: var(--font-serif);
-      font-style: italic;
-      font-size: 1.15rem;
-      color: var(--text-muted);
-    }
-
-    .guest-info {
-      background-color: #fdf8f5;
-      border-radius: 12px;
-      padding: 15px;
-      margin-top: 15px;
-      border: 1px solid var(--accent);
-    }
-
-    .guest-info h4 {
-      font-size: 0.8rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--primary);
-      margin-bottom: 5px;
-    }
-
-    .guest-name {
-      font-family: var(--font-serif);
-      font-size: 1.3rem;
-      font-weight: 600;
-    }
-
-    /* --- DETALLES DE FECHA Y LUGAR --- */
-    .details-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      margin-top: 10px;
-    }
-
-    .detail-card {
-      background: #faf6f0;
-      padding: 15px;
-      border-radius: 12px;
-    }
-
-    .detail-card i {
-      font-size: 1.5rem;
-      color: var(--primary);
-      margin-bottom: 8px;
-    }
-
-    .detail-card h3 {
-      font-family: var(--font-serif);
-      font-size: 1.2rem;
-      margin-bottom: 5px;
-    }
-
-    /* --- BOTONES --- */
-    .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      background-color: var(--primary);
-      color: #fff;
-      text-decoration: none;
-      border-radius: 30px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-top: 12px;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(212, 163, 115, 0.3);
-      border: none;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      background-color: #c39262;
-      transform: translateY(-2px);
-    }
-
-    .btn-whatsapp {
-      background-color: #25d366;
-      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
-    }
-
-    .btn-whatsapp:hover {
-      background-color: #1ebc57;
-    }
-
-    /* --- CÓDIGO DE VESTUARIO --- */
-    .dress-code-box {
-      text-align: left;
-      background: #fdf8f5;
-      padding: 15px;
-      border-radius: 12px;
-      margin-bottom: 15px;
-    }
-
-    .dress-code-box h4 {
-      color: var(--primary);
-      margin-bottom: 5px;
-      font-size: 0.95rem;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .disclaimer {
-      font-size: 0.8rem;
-      color: #998a7a;
-      background-color: #fff5f5;
-      padding: 12px;
-      border-radius: 10px;
-      border-left: 3px solid var(--secondary);
-    }
-
-    /* --- NOTAS ADICIONALES --- */
-    .extra-notes {
-      display: flex;
-      justify-content: space-around;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      margin-top: 15px;
-    }
-
-    .extra-notes div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .extra-notes i {
-      color: var(--primary);
-    }
-
-    .footer-text {
-      font-family: var(--font-title);
-      font-size: 2.2rem;
-      color: var(--primary);
-      margin-top: 15px;
-    }
-  </style>
 </head>
 <body>
 
@@ -267,16 +26,22 @@
 
     <!-- CABECERA CON FOTO Y NOMBRE -->
     <header class="hero fade-in">
-      <div class="photo-frame">
-        <!-- Reemplaza la URL de la imagen por la foto real -->
-        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=500" alt="María Camila">
+
+      <div class="titulo-xv">
+        <span>MIS</span>
+        <h2>XV</h2>
+        <span>AÑOS</span>
       </div>
-      <p class="subtitle">Mis XV Años</p>
       <h1 class="main-name">María Camila</h1>
     </header>
 
     <!-- FRASE E INVITADO -->
     <section class="section fade-in">
+
+            <div class="photo-frame">
+        <!-- Reemplaza la URL de la imagen por la foto real -->
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=500" alt="María Camila">
+      </div>
       <p class="quote">
         "Hay momentos que se guardan para siempre en el corazón. Con inmensa alegría, te invito a compartir conmigo la noche más especial de mis XV años."
       </p>
