@@ -1,0 +1,156 @@
+/* --- SECCIÓN CABALLEROS Y CONFIRMACIÓN --- */
+.caballeros-confirmacion-seccion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0px 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Caballeros */
+.caballeros-container {
+  margin-bottom: 35px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.caballeros-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  letter-spacing: 1.5px;
+  color: #222;
+  font-weight: 600;
+}
+
+.caballeros-titulo i {
+  font-size: 1.4rem;
+}
+
+.caballeros-descripcion {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: #444;
+  margin-top: 5px;
+  margin-bottom: 12px;
+}
+
+.caballeros-card {
+  max-width: 130px;
+  padding: 10px;
+  margin-bottom: 0;
+}
+
+.swatches-caballeros {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.swatches-caballeros .color-swatch {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+}
+
+.swatch-blanco {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+}
+
+.swatch-negro {
+  background-color: #1a1a1a;
+}
+
+/* Confirmación */
+.confirmacion-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo-confirmacion {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  color: #222;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.subtitulo-asistencia {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #e89ba7;
+  display: block;
+  margin-top: -15px;
+  margin-bottom: 20px;
+}
+
+.nota-fecha {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: #444;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+/* Lista de Teléfonos */
+.telefonos-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.item-telefono {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.item-telefono:hover {
+  transform: scale(1.03);
+}
+
+.icono-ws-rosa {
+  width: 50px;
+  height: 50px;
+  background-color: #e89ba7;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 1.8rem;
+  box-shadow: 0 4px 10px rgba(232, 155, 167, 0.3);
+}
+
+.numero-telefono {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #222;
+  letter-spacing: 1px;
+}
+
+.disclaimer-confirmacion {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: #555;
+  line-height: 1.4;
+}

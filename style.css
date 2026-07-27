@@ -1,5 +1,9 @@
 
 @import url("musica.css");
+@import url("conteo.css");
+@import url("ubicacion.css");
+@import url("vestuario.css");
+@import url("caballeron.css");
 /* --- VARIABLES DE COLOR Y ESTILOS BASE --- */
 :root {
     --primary: #d4a373;
@@ -139,6 +143,29 @@ header {
     top: 25px;
     left: 0;
 }
+
+
+.photo-frame-2 {
+    width: 100%;
+    height: 400px; /* Define una altura fija (ajusta este valor según el alto de tu foto) */
+    background-image: url('images/camia-2.png');
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative; /* Sirve de ancla para posicionar la flor sin empujar nada */
+}
+
+.photo-frame-2 img {
+    width: 120px;
+    height: auto;
+    display: block;
+    
+    /* Posicionamiento absoluto para no empujar el contenido inferior */
+    position: absolute;
+    top: 25px;
+    left: 0;
+}
+
 
 .subtitle {
     font-family: var(--font-serif);

@@ -1,0 +1,156 @@
+/* --- SECCIÓN LUGAR Y HORA --- */
+.ubicacion-seccion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px 20px;
+  padding-bottom: 0;
+}
+
+/* Ícono rosado con fondo traslúcido */
+.icono-circulo-rosa {
+  width: 42px;
+  height: 42px;
+  background-color: #f8c8d0;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #c86278;
+  font-size: 1.2rem;
+  margin-right: 8px;
+}
+
+/* Encabezado Lugar: */
+.lugar-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.lugar-cursiva {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+/* Nombre del lugar en mayúsculas */
+.nombre-lugar {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  color: #222;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* Botón Ver Ubicación */
+.btn-ubicacion {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #533a4d; /* Tono morado/oscuro elegante */
+  color: #ffffff;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-ubicacion:hover {
+  background-color: #3f2a3a;
+  transform: translateY(-2px);
+}
+
+.subtexto-clic {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  color: #777;
+  margin-top: 6px;
+  margin-bottom: 25px;
+}
+
+/* Caja de Parqueadero */
+.parqueadero-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 25px;
+  max-width: 320px;
+}
+
+.icono-carro {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.linea-vertical {
+  width: 1px;
+  height: 30px;
+  background-color: #ccc;
+}
+
+.texto-parqueadero {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  color: #444;
+  text-align: left;
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+}
+
+/* Sección Hora */
+.hora-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.hora-cursiva {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.8rem;
+  color: #333;
+}
+
+.hora-texto {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #222;
+  margin-left: 5px;
+}
+
+/* Botón Lluvia de Sobres */
+.lluvia-sobres-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #e89ba7; /* Rosa suave del diseño */
+  color: #ffffff;
+  padding: 12px 35px;
+  border-radius: 30px;
+  margin-top: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.lluvia-sobres-btn i {
+  font-size: 1.5rem;
+}
+
+.lluvia-cursiva {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.2rem;
+  color: #ffffff;
+  line-height: 1;
+}

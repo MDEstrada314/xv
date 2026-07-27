@@ -52,3 +52,39 @@
     const fadeElements = document.querySelectorAll(".fade-in");
     fadeElements.forEach(el => observer.observe(el));
   });
+
+
+  // --- LÓGICA DEL CONTADOR REGRESIVO ---
+function iniciarCuentaRegresiva() {
+  // Configura la fecha objetivo: Año, Mes (0 = Ene, 7 = Ago), Día, Hora, Minutos
+  const fechaEvento = new Date(2026, 7, 22, 19, 0, 0).getTime();
+
+  const timer = setInterval(function () {
+    const ahora = new Date().getTime();
+    const diferencia = fechaEvento - ahora;
+
+    // Cálculo de Días, Horas, Minutos y Segundos
+    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+    // Renderizar en el HTML (con .padStart para asegurar 2 dígitos: "03", "09", etc.)
+    if (diferencia > 0) {
+      document.getElementById("days").textContent = String(dias).padStart(2, '0');
+      document.getElementById("hours").textContent = String(horas).padStart(2, '0');
+      document.getElementById("minutes").textContent = String(minutos).padStart(2, '0');
+      document.getElementById("seconds").textContent = String(segundos).padStart(2, '0');
+    } else {
+      // Si la fecha ya pasó
+      clearInterval(timer);
+      document.querySelector(".countdown-title").textContent = "¡LLEGÓ EL DÍA!";
+      document.querySelector(".countdown-container").innerHTML = "<p style='font-family: Playfair Display; font-size: 1.5rem; color: #e5989b;'>¡HOY CELEBRAMOS!</p>";
+    }
+  }, 1000);
+}
+
+// Iniciar cuando el documento cargue
+document.addEventListener("DOMContentLoaded", function () {
+  iniciarCuentaRegresiva();
+});

@@ -1,0 +1,84 @@
+/* --- SECCIÓN CONTADOR REGRESIVO --- */
+.section-countdown {
+  text-align: center;
+  padding: 5px 20px;
+  background-color: transparent; /* Si tienes un fondo con textura, se traslucirá */
+}
+
+.countdown-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+  color: #222222;
+  margin-bottom: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.time-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 65px;
+}
+
+/* Estilo para los números (Rosa pastel y fuente serif elegante) */
+.time-box .number {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  color: #e5989b; /* Tono rosa pastel de la invitación */
+  line-height: 1;
+  font-weight: 400;
+}
+
+/* Estilo para los textos debajo (DÍAS, HORAS, etc.) */
+.time-box .label {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: #222222;
+  margin-top: 8px;
+  font-weight: 400;
+}
+
+/* Dos puntos separadores */
+.colon {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: #e5989b;
+  line-height: 1;
+  margin-bottom: 20px; /* Alinea los dos puntos con el centro de los números */
+}
+
+/* Ajuste para pantallas pequeñas (Celulares) */
+@media (max-width: 480px) {
+  .countdown-container {
+    gap: 6px;
+  }
+  
+  .time-box {
+    min-width: 50px;
+  }
+
+  .time-box .number {
+    font-size: 2.2rem;
+  }
+
+  .time-box .label {
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+  }
+
+  .colon {
+    font-size: 1.8rem;
+  }
+}
