@@ -1,9 +1,9 @@
-
 @import url("musica.css");
 @import url("conteo.css");
 @import url("ubicacion.css");
 @import url("vestuario.css");
 @import url("caballeron.css");
+
 /* --- VARIABLES DE COLOR Y ESTILOS BASE --- */
 :root {
     --primary: #d4a373;
@@ -21,10 +21,12 @@
 
 /* 1. Definir la tipografía */
 @font-face {
-  font-family: 'Symphony-Regular'; /* El nombre que tú quieras darle */
-  src:  url('fonts/symphony-pro-regular.otf') format('truetype'); /* Opcional: por si tienes más formatos */
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Symphony-Regular';
+    /* El nombre que tú quieras darle */
+    src: url('fonts/symphony-pro-regular.otf') format('truetype');
+    /* Opcional: por si tienes más formatos */
+    font-weight: normal;
+    font-style: normal;
 }
 
 * {
@@ -45,7 +47,7 @@ body {
 }
 
 header {
-    height: 450px;
+    height: auto;
     width: 100%;
     background-image: url('images/flores-1.png');
 
@@ -54,7 +56,7 @@ header {
     background-size: contain;
     background-size: cover;
 
-    position: relative; 
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -87,11 +89,7 @@ header {
 
     }
 
-    img {
-        width: 350px;
-        margin: 0;
-        padding: 0;
-    }
+
 
 }
 
@@ -128,13 +126,15 @@ header {
 
 .photo-frame {
     width: 100%;
-    height: 600px; /* Define una altura fija (ajusta este valor según el alto de tu foto) */
+    height: 600px;
+    margin-top: 100px;
+    /* Define una altura fija (ajusta este valor según el alto de tu foto) */
     background-image: url('images/camila-1.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
     background-size: cover;
-    position: relative; 
+    position: relative;
     z-index: 10;
 }
 
@@ -142,7 +142,7 @@ header {
     width: 120px;
     height: auto;
     display: block;
-    
+
     /* Posicionamiento absoluto para no empujar el contenido inferior */
     position: absolute;
     top: 25px;
@@ -152,21 +152,22 @@ header {
 
 .photo-frame-2 {
     width: 100%;
-    height: 420px; /* Define una altura fija (ajusta este valor según el alto de tu foto) */
+    height: 420px;
+    /* Define una altura fija (ajusta este valor según el alto de tu foto) */
     background-image: url('images/camia-2.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
     background-size: cover;
-    position: relative; 
-   
+    position: relative;
+
 }
 
 .photo-frame-2 img {
     width: 120px;
     height: auto;
     display: block;
-    
+
     /* Posicionamiento absoluto para no empujar el contenido inferior */
     position: absolute;
     top: 25px;
@@ -174,22 +175,23 @@ header {
 }
 
 
-.photo-frame-3{
+.photo-frame-3 {
     width: 100%;
-    height: 450px; /* Define una altura fija (ajusta este valor según el alto de tu foto) */
+    height: 450px;
+    /* Define una altura fija (ajusta este valor según el alto de tu foto) */
     background-image: url('images/camila-3.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
     background-size: cover;
-    position: relative; 
+    position: relative;
 }
 
 .photo-frame-3 img {
     width: 120px;
     height: auto;
     display: block;
-    
+
     /* Posicionamiento absoluto para no empujar el contenido inferior */
     position: absolute;
     top: 25px;
@@ -206,45 +208,54 @@ header {
     text-transform: uppercase;
 }
 
-.contenedor-nombre { 
-  position: relative; /* Clave: sirve de ancla para los hijos absolutos */
-  width: 100%;       /* O el ancho que necesites */
-  height: 0px;     /* Dale una altura mínima para que se vea el contenido */
-  display: flex;
-  justify-content: center; /* Centra el bloque entero en la página */
-  align-items: center;  
-  margin: 0;
-  padding: 0;  /* Centra el bloque entero verticalmente si es necesario */
-  
+.contenedor-nombre {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+
+
+    img {
+        width: 350px;
+        
+    }
+
+
 }
 
-.nombre-principal{
+.nombre-principal {
     position: absolute;
     font-family: "Playfair Display", serif;
     font-weight: 200;
     font-size: 3rem;
-    color: #000000;   
-    text-transform: uppercase; 
-    margin: 0;
-    z-index: 2;  
+    color: #000000;
+    text-transform: uppercase;
+    margin-top: 30px;
+    z-index: 2;
     left: 50%;
-    transform: translateX(-50%); 
+    transform: translateX(-50%);
     top: 20px;
 
-  
+
 }
 
 .nombre-cursiva {
     position: absolute;
     font-family: 'Symphony-Regular', serif;
     font-size: 6.5rem;
-    color: #E08E8E;  
-    margin: 0;
-    z-index: 1; 
-  /* Ajuste de posición SUPER ESPECÍFICO respecto a "MARÍA" */
-  /* Usamos las coordenadas de la imagen de referencia como guía */
-  left: calc(40% - 60px); /* Centrado y luego desplazado a la IZQUIERDA (eje X) */
-  top: 15px;
+    color: #E08E8E;
+    padding: 0px;
+    margin-top: 25px;
+    z-index: 1;
+    /* Ajuste de posición SUPER ESPECÍFICO respecto a "MARÍA" */
+    /* Usamos las coordenadas de la imagen de referencia como guía */
+    left: calc(40% - 60px);
+    /* Centrado y luego desplazado a la IZQUIERDA (eje X) */
+    top: 15px;
 
 }
 
