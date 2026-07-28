@@ -32,7 +32,7 @@
   background-image: url('images/flores-izquierda.png'), url('images/flores-derecha.png');
   background-position: left center, right center;
   background-repeat: no-repeat, no-repeat;
-  background-size: 160px auto, 160px auto; /* Ajusta este valor según el tamaño de tus PNGs */
+  background-size: 200px; /* Ajusta este valor según el tamaño de tus PNGs */
 }
 
 /* --- REPRODUCTOR DE MÚSICA --- */

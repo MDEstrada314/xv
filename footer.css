@@ -1,9 +1,20 @@
 .footer-invitacion{
     width:100%;
+    height: 250px;
     text-align:center;
 
     position:relative;
     overflow:hidden;
+
+    background-image: url('images/flores-3.png');
+
+   /* CAMBIA ESTO: Alinea la imagen a la parte superior */
+    
+    background-size: 200px;
+    background-position: center -62px;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* ICONOS */
@@ -12,15 +23,15 @@
     display:flex;
     justify-content:center;
     align-items:center;
-    gap:10px;
-    margin-bottom:40px;
+    gap:20px;
+    margin-bottom:20px;
     flex-wrap:wrap;
 }
 
 .info-item{
     display:flex;
     align-items:center;
-    gap:20px;
+    gap:8px;
 
    
 }
@@ -46,17 +57,17 @@
 .mensaje-footer{
 
     font-family:'Great Vibes', cursive;
-    font-size:60px;
+    font-size:50px;
     color:#ef9aa8;
     font-weight:400;
 
-    margin:40px 0;
+    
 }
 
 /* CORONA */
 
 .corona{
 
-    width:300px;
+    width:200px;
     
 }

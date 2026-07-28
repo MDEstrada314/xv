@@ -103,14 +103,14 @@
   letter-spacing: 1px;
   color: #444;
   line-height: 1.5;
-  margin-bottom: 25px;
+ 
 }
 
 /* Lista de Teléfonos */
 .telefonos-lista {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+ 
   margin-bottom: 25px;
 }
 
