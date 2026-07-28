@@ -17,8 +17,6 @@
 }
 
 
-
-
 /* --- SECCIÓN LUGAR Y HORA --- */
 .ubicacion-seccion {
   display: flex;
@@ -27,6 +25,11 @@
   text-align: center;
   padding: 30px 20px;
   padding-bottom: 0;
+
+  background-image: url('images/flores-4.png');
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: 500px;
 }
 
 /* Ícono rosado con fondo traslúcido */
