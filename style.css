@@ -123,6 +123,7 @@ header {
     text-align: center;
 
     padding: 30px 20px 10px;
+    height: 325px;
 }
 
 .photo-frame {
@@ -411,4 +412,49 @@ header {
     font-size: 2.2rem;
     color: var(--primary);
     margin-top: 15px;
+}
+
+
+/* --- DIVISORES DE LÍNEA ELEGANTES --- */
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+    img{
+        width: 100%;
+        margin-bottom: 12px;
+        
+    }
+  
+}
+
+
+/* --- DIVISORES DE LÍNEA ELEGANTES --- */
+.divider-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+    img{
+        width: 100%;
+     
+        transform: scaleY(-1);
+        
+    }
+  
+}
+
+/* --- DIVISORES DE LÍNEA ELEGANTES --- */
+.divider-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+     img{
+        width: 60%;
+        margin-bottom: 12px;
+        
+    }
+  
 }

@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Symphony-Regular';
+    /* El nombre que tú quieras darle */
+    src: url('fonts/symphony-pro-regular.otf') format('truetype');
+    /* Opcional: por si tienes más formatos */
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* --- SECCIÓN CONTADOR REGRESIVO --- */
 .section-countdown {
   text-align: center;
@@ -8,7 +17,6 @@
 .countdown-title {
   font-family: 'Playfair Display', serif;
   font-size: 1.2rem;
-  letter-spacing: 4px;
   color: #222222;
   margin-bottom: 20px;
   font-weight: 400;
@@ -48,6 +56,10 @@
   color: #222222;
   margin-top: 8px;
   font-weight: 400;
+}
+
+.fecha-script{
+  font-family: 'Symphony-Regular', serif;
 }
 
 /* Dos puntos separadores */

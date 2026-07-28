@@ -118,13 +118,7 @@
   margin: 0 5px;
 }
 
-/* --- DIVISORES DE LÍNEA ELEGANTES --- */
-.divider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 25px 0;
-}
+
 
 .divider .line {
   flex: 1;
@@ -150,6 +144,7 @@
   color: #333333;
   max-width: 440px;
   margin: 0 auto;
+  margin-bottom: 12px;
   letter-spacing: 0.5px;
   font-weight: 300;
 }

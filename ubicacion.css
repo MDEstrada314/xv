@@ -1,3 +1,24 @@
+@font-face {
+    font-family: 'Symphony-Regular';
+    /* El nombre que tú quieras darle */
+    src: url('fonts/symphony-pro-regular.otf') format('truetype');
+    /* Opcional: por si tienes más formatos */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'scholar-regular';
+    /* El nombre que tú quieras darle */
+    src: url('fonts/scholar-regular.otf') format('truetype');
+    /* Opcional: por si tienes más formatos */
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
 /* --- SECCIÓN LUGAR Y HORA --- */
 .ubicacion-seccion {
   display: flex;
@@ -30,20 +51,29 @@
   margin-bottom: 10px;
 }
 
+.icono-circulo-rosa {
+  position: relative;
+  z-index: 1; /* Círculo en la capa trasera */
+}
+
 .lugar-cursiva {
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Symphony-Regular', serif;
   font-size: 2.5rem;
-  color: #333;
+  color: #222; /* Asigna aquí el color que ibas a colocar */
+  
+  /* Propiedades clave para montar la palabra por encima */
+  margin-left: -20px; /* Sube/corre el texto hacia la izquierda sobre el ícono */
+  position: relative;
+  z-index: 2;         /* Asegura que el texto esté por encima del círculo */
 }
 
 /* Nombre del lugar en mayúsculas */
 .nombre-lugar {
   font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
-  letter-spacing: 2px;
   color: #222;
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   text-transform: uppercase;
 }
 
@@ -72,7 +102,8 @@
 .subtexto-clic {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.75rem;
-  color: #777;
+  color: #161616;
+  font-weight: 500;
   margin-top: 6px;
   margin-bottom: 25px;
 }
@@ -112,45 +143,57 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  margin-bottom: 20px;
+  gap: 0; /* Cambiado a 0 para permitir que se traslapen sin separaciones forzadas */
+  
+}
+
+/* Agrega position y z-index al círculo para dejarlo en la capa trasera */
+.icono-circulo-rosa {
+  position: relative;
+  z-index: 1;
 }
 
 .hora-cursiva {
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Symphony-Regular', cursive;
   font-size: 2.8rem;
   color: #333;
+
+  /* Propiedades para superponer sobre el ícono */
+  margin-left: -20px; /* Desplaza la 'H' hacia la izquierda sobre el círculo rosa */
+  position: relative;
+  z-index: 2;         /* Garantiza que el texto quede POR ENCIMA del círculo */
 }
 
 .hora-texto {
-  font-family: 'Playfair Display', serif;
+  font-family: 'scholar-regular', sans-serif;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 200;
   color: #222;
-  margin-left: 5px;
+  margin-left: 8px; /* Ajusta la distancia entre la palabra "Hora" y "6:00 p.m" */
 }
 
 /* Botón Lluvia de Sobres */
 .lluvia-sobres-btn {
+    width: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 5px;
   background-color: #e89ba7; /* Rosa suave del diseño */
   color: #ffffff;
-  padding: 12px 35px;
-  border-radius: 30px;
+  padding: 12px 5px;
+  border-radius: 20px;
   margin-top: 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-.lluvia-sobres-btn i {
-  font-size: 1.5rem;
+.lluvia-sobres-btn img {
+  width: 30px;
 }
 
 .lluvia-cursiva {
-  font-family: 'Great Vibes', cursive;
-  font-size: 2.2rem;
-  color: #ffffff;
+  font-family: 'Symphony-Regular', cursive;
+  font-size: 2.5rem;
+  color: #252525;
   line-height: 1;
 }
