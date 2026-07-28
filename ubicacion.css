@@ -26,10 +26,11 @@
   padding: 30px 20px;
   padding-bottom: 0;
 
-  background-image: url('images/flores-4.png');
+  background-image: url('images/flores-6.png');
   background-position:center;
   background-repeat: no-repeat;
   background-size: 500px;
+  background-position: center 100px;
 }
 
 /* Ícono rosado con fondo traslúcido */

@@ -8,6 +8,11 @@
   max-width: 500px;
   margin: 0 auto;
   margin-top: 15px;
+
+   background-image: url('images/flores-4.png');
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: 500px;
 }
 
 /* Caballeros */

@@ -27,6 +27,12 @@
   padding: 0px 70px;
   max-width: 500px;
   margin: 0 auto;
+
+  background-image: url('images/flores-5.png');
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: 500px;
+  background-position: center top;
 }
 
 /* Encabezado */
