@@ -115,6 +115,14 @@
    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
 }
 
+.icon-vestido{
+    width: 20px;
+}
+
+.icon-camisa{
+    width: 20px;
+}
+
 
 /* Colores Reservados */
 .titulo-reservados {
@@ -129,12 +137,13 @@
 
 .reservado-tex{
   display: flex;
-  gap:15px;
+  gap:32px;
+  margin-bottom: 12px;
 }
 
 .palette-reservados-card {
   max-width: 360px;
-  padding: 16px 20px 8px 20px;
+  padding: 8px 20px 8px 20px;
 }
 
 .reservados-grid {
@@ -151,8 +160,8 @@
 }
 
 .reservado-item .color-swatch {
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   border-radius: 10px;
 }
 

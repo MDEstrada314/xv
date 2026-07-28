@@ -7,6 +7,7 @@
   padding: 0px 20px;
   max-width: 500px;
   margin: 0 auto;
+  margin-top: 15px;
 }
 
 /* Caballeros */
@@ -89,12 +90,11 @@
 }
 
 .subtitulo-asistencia {
-  font-family: 'Great Vibes', cursive;
-  font-size: 3rem;
+  font-family: 'Symphony-Regular', serif;
+  font-size: 5rem;
   color: #e89ba7;
   display: block;
-  margin-top: -15px;
-  margin-bottom: 20px;
+  margin-top: -52px;
 }
 
 .nota-fecha {

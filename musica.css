@@ -160,7 +160,7 @@
 }
 
 .fecha-script {
-  font-family: 'Great Vibes', cursive; /* O la fuente cursiva que tengas importada */
+  font-family: 'Great Vibes', cursive; 
   font-size: 2.5rem;
   color: #333333;
   display: block;
